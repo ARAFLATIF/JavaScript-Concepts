@@ -105,3 +105,89 @@ console.log(PI); // 3.14159
 PI = 2.5; // TypeError: Assignment to constant variable.
 
 
+
+VARIABLE NAMING AND CONVENTIONS : 
+
+General Rules
+Case Sensitivity: Variable names in JavaScript are case-sensitive. This means msg, MSG, Msg, and mSg are considered separate variables234.
+Allowed Characters: Variable names can only contain letters, digits, underscores (_), and dollar signs ($). Spaces and other special characters are not allowed135.
+First Character: The first character of a variable name must be a letter, an underscore, or a dollar sign. It cannot be a digit135.
+Reserved Words: Variable names cannot be reserved keywords in JavaScript, such as var, function, return, etc
+
+
+
+Naming Conventions
+Variables
+Camel Case: The most recommended naming convention for variables is camel case, where the first word is in lowercase and subsequent words are capitalized. For example:
+
+let dogName = 'Scooby-Doo';
+let isActive = true;
+```[2][4].
+
+
+Self-Descriptive Names: Variable names should be self-descriptive and indicate the purpose or content of the variable. For example:
+
+let firstName = 'Robin';
+let isUserLoggedIn = true;
+```[2][4].
+
+
+  Booleans
+Prefixes: Boolean variables should use prefixes like is, are, or has to indicate their Boolean nature. For example:
+
+let isVisible = true;
+let hasOwner = false;
+```[2][4].
+
+
+
+Functions
+Camel Case with Verbs: Function names should also follow the camel case convention and include a verb to describe the action the function performs. For example:
+
+function getName(firstName, lastName) {
+  return `${firstName} ${lastName}`;
+}
+```[2][4].
+
+
+
+  Constants
+Uppercase with Underscores: Constants should be declared in uppercase letters, and if the name contains multiple words, use underscores to separate them. For example:
+
+const SECONDS_IN_A_MINUTE = 60;
+const DAYS_UNTIL_TOMORROW = 1;
+```[2][4].
+
+
+
+Scope and Declaration
+var, let, const: Variables can be declared using var, let, or const. Each has different scope and reassignment rules:
+var: Global or function scope, can be redeclared and reassigned.
+let: Block scope, cannot be redeclared but can be reassigned.
+const: Block scope, cannot be redeclared or reassigned
+
+
+
+Best Practices
+Consistency: Stick to a consistent naming convention throughout the codebase.
+Readability: Use names that are easy to read and understand.
+Avoid Short Names: Avoid using very short names that do not provide enough context. For example, d is not as clear as dogName24.
+Avoid Reserved Words: Do not use reserved words as variable names to avoid syntax errors135.
+Here is an example that demonstrates some of these conventions:
+
+let dogName = 'Scooby-Doo';
+let isBarking = true;
+
+const SECONDS_IN_A_MINUTE = 60;
+
+function getName(firstName, lastName) {
+  return `${firstName} ${lastName}`;
+}
+
+if (isBarking) {
+  console.log(`${dogName} is barking.`);
+}
+
+console.log(getName('Robin', 'Wieruch'));
+
+
