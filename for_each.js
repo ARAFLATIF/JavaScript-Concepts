@@ -41,3 +41,33 @@ OUTPUT :
 3
 4
 5
+
+
+
+Updating Array Elements
+The forEach method can also be used to update the elements of the array:
+
+let students = ['John', 'Sara', 'Jack'];
+students.forEach(function(item, index, arr) {
+    arr[index] = 'Hello ' + item;
+});
+console.log(students); // Output: ["Hello John", "Hello Sara", "Hello Jack"]
+
+
+forEach with Sets and Maps
+
+The forEach method can also be used with Sets and Maps.
+
+  Sets
+
+const set = new Set([1, 2, 3]);
+set.forEach(function(value, valueAgain, set) {
+    console.log(`Value: ${value}, Set: ${set}`);
+});
+
+OUTPUT : 
+
+Value: 1, Set: Set { 1, 2, 3 }
+Value: 2, Set: Set { 1, 2, 3 }
+Value: 3, Set: Set { 1, 2, 3 }
+
