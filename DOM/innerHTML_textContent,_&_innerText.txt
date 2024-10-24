@@ -1,0 +1,11 @@
+innerHTML, textContent, & innerText
+These properties allow you to get or set the content of an element:
+
+element.innerHTML = '<strong>New content</strong>';
+element.textContent = 'Plain text content';
+element.innerText = 'Visible text content';
+
+Key differences:
+innerHTML can include HTML tags
+textContent returns all text, including hidden elements
+innerText only returns visible text
