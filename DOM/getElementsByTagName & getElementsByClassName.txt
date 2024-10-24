@@ -1,0 +1,13 @@
+getElementsByTagName & getElementsByClassName
+These methods return collections of elements:
+
+const paragraphs = document.getElementsByTagName('p');
+const redElements = document.getElementsByClassName('red');
+
+
+Key points:
+Return live HTMLCollections
+Can be used on the document or any element
+getElementsByClassName can take multiple class names
+
+  
