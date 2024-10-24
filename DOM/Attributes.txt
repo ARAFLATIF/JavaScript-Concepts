@@ -1,0 +1,16 @@
+Attributes
+You can manipulate element attributes using various methods:
+
+element.setAttribute('class', 'newClass');
+const value = element.getAttribute('id');
+element.removeAttribute('style');
+
+
+You can also access many attributes directly as properties:
+
+element.id = 'newId';
+element.className = 'newClass';
+
+
+These methods provide powerful ways to interact with and manipulate the DOM, 
+allowing you to create dynamic and interactive web pages.
