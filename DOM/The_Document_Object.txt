@@ -1,0 +1,11 @@
+The Document object is the entry point to a web page's content. It's like the main door to the DOM structure. Through this object, you can:
+Access elements on the page (e.g., find a specific paragraph or button)
+Create new elements
+Change page content
+Modify page structure
+Some common uses of the Document object include:
+document.getElementById(): Find an element by its ID
+document.createElement(): Create a new HTML element
+document.querySelector(): Find elements using CSS selectors
+Think of the Document object as a toolkit that gives you the power to manipulate everything on a web page programmatically.
+In essence, the DOM provides the structure, and the Document object gives you the tools to work with that structure.
