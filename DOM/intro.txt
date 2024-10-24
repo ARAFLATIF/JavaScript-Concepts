@@ -1,0 +1,11 @@
+Introducing the DOM (Document Object Model)
+The DOM is like a tree-like structure that represents a web page. Imagine a web page as a family tree:
+The entire document is the tree's root.
+HTML elements (like <div>, <p>, <h1>) are branches or nodes.
+Text inside elements are leaves.
+This structure allows programmers to:
+Access any part of the web page easily
+Change content dynamically
+Add or remove elements
+Modify styles and attributes
+It's essentially a way for programming languages (usually JavaScript) to interact with and manipulate web pages.
