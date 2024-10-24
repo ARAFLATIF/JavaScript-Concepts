@@ -1,0 +1,12 @@
+querySelector & querySelectorAll
+These methods use CSS selectors to select elements:
+
+const firstParagraph = document.querySelector('p');
+const allRedDivs = document.querySelectorAll('div.red');
+
+
+Key points:
+querySelector returns the first matching element
+querySelectorAll returns a static NodeList of all matches
+More flexible than getElementById and getElementsBy* methods
+
