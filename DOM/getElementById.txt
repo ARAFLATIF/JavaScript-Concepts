@@ -1,0 +1,9 @@
+getElementById
+getElementById is a method to select a single element by its unique ID.
+
+const element = document.getElementById('myId');
+
+Key points:
+Returns a single element (or null if not found)
+IDs should be unique in a document
+Fastest way to select a specific element
