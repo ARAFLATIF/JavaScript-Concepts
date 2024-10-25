@@ -1,0 +1,114 @@
+Introduction to Events in JavaScript
+Events in JavaScript are actions or occurrences that happen in the browser, often triggered by user interactions or browser actions. Here’s a comprehensive introduction to events, including how they work, types of events, and methods for handling them.
+What are Events?
+Events are signals fired inside the browser window that notify of changes in the browser or operating system environment. These can include user interactions such as mouse clicks, keyboard presses, and page loads, as well as browser actions like form submissions and window resizing245.
+Types of Events
+Here are some common types of events:
+Mouse Events:
+onclick: Triggered when an element is clicked.
+onmouseover: Fired when the mouse pointer moves over an element.
+onmouseout: Occurs when the mouse pointer leaves an element.
+onmousedown and onmouseup: Fired when a mouse button is pressed or released145.
+Keyboard Events:
+onkeydown: Fired when a key is pressed down.
+onkeyup: Fired when a key is released145.
+Form Events:
+onchange: Triggered when the value of an input element changes.
+onsubmit: Fired when a form is submitted45.
+Loading Events:
+onload: Occurs when a page has finished loading145.
+Focus Events:
+onfocus: Occurs when an element gets focus.
+onblur: Fired when an element loses focus5.
+Registering Event Handlers
+There are several ways to register event handlers in JavaScript:
+Using onevent Properties
+Event handlers can be assigned directly to the corresponding onevent properties of an HTML or DOM element. For example:
+
+<button onclick="greet()">Click me</button>
+<script>
+  function greet() {
+    console.log("Hello, world!");
+  }
+</script>
+
+
+This method allows only one event handler per event type to be assigned to an element124.
+Using addEventListener Method
+The addEventListener method is more flexible and allows multiple event handlers to be added or removed for an element. Here’s an example:
+
+<button id="myButton">Click me</button>
+<script>
+  const button = document.getElementById("myButton");
+  function greet(event) {
+    console.log("Hello, world!", event);
+  }
+  button.addEventListener("click", greet);
+</script>
+
+This method also allows for the removal of event handlers using removeEventListener:
+
+button.removeEventListener("click", greet);
+
+
+
+Additionally, addEventListener can take an options object or an AbortSignal to control the behavior of the event listener, such as capturing the event or aborting the listener23.
+Inline Event Handlers
+While not recommended due to readability and maintainability issues, event handlers can also be set directly in HTML using inline event attributes:
+
+<button onclick="alert('Hello, world!')">Click me</button>
+
+This approach is generally discouraged because it mixes JavaScript code with HTML markup
+
+
+
+Event Object
+Event handler functions receive an event object as their first argument, which provides additional information about the event. For example:
+
+
+<button id="myButton">Click me</button>
+<script>
+  const button = document.getElementById("myButton");
+  button.addEventListener("click", event => {
+    console.log("Button clicked with mouse button:", event.button);
+  });
+</script>
+
+The event object can be used to access details such as the type of event, the target element, and any other relevant data
+
+
+
+Event Phases and Propagation
+Events go through three phases: capturing, target, and bubbling. During the capturing phase, the event travels down the DOM tree from the root to the target element. At the target phase, the event reaches the target element. During the bubbling phase, the event travels back up the DOM tree from the target element to the root.
+Event handlers can be set to capture events during the capturing phase by using the addEventListener method with the capture option set to true:
+
+button.addEventListener("click", greet, true);
+
+
+Preventing Default Actions
+Some events have default actions associated with them, such as following a link when clicked. These default actions can be prevented by calling the preventDefault method on the event object:
+
+<a href="https://example.com" id="myLink">Click me</a>
+<script>
+  const link = document.getElementById("myLink");
+  link.addEventListener("click", event => {
+    event.preventDefault();
+    console.log("Default action prevented.");
+  });
+</script>
+
+
+This is useful for customizing the behavior of elements and preventing unwanted actions3.
+Summary
+Events: Signals fired in the browser due to user interactions or browser actions.
+Event Handlers: Functions that respond to events, allowing interactive web applications.
+Registration Methods: Using onevent properties, addEventListener, and inline event attributes.
+Event Object: Provides details about the event.
+Event Phases: Capturing, target, and bubbling phases.
+Preventing Default Actions: Using preventDefault to customize element behavior.
+
+
+
+
+
+
