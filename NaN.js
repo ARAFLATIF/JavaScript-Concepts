@@ -3,7 +3,7 @@ In JavaScript, NaN stands for "Not a Number" and is a special value that indicat
 
 
 Definition and Scope
-NaN is a property of the global object, making it a variable in global scope. 
+NaN is a property of the global object, making it a variable in glo bal scope. 
   It is non-configurable and non-writable in modern browsers
 
 
