@@ -1,0 +1,75 @@
+Inline Events in JavaScript
+Inline events are a way to attach event handlers directly to HTML elements using attributes that start with the on prefix. Here’s a detailed look at how they work, their advantages and disadvantages, and comparisons with other event handling methods.
+Syntax and Example
+Inline events are specified as attributes within the HTML tag of an element. Here is an example of an inline event handler for a button click:
+
+
+<button onclick="btnClick()">Click Me</button>
+<script>
+  function btnClick() {
+    console.log("Button Clicked");
+  }
+</script>
+
+In this example, the onclick attribute is used to specify the btnClick function, which will be executed when the button is clicked135.
+Advantages
+Simplicity
+Inline events are straightforward and easy to implement, especially for simple cases.
+They do not require additional JavaScript code to select the element and attach the event handler3.
+Performance
+Google's main page, for instance, uses inline event handlers to save server calls and improve performance by avoiding external script loading3.
+Disadvantages
+Overwriting
+One of the significant drawbacks of inline events is that they can be easily overwritten. If you assign multiple inline event handlers to the same event, only the last one will be executed
+
+
+<button id="btn1">Button 1</button>
+<script>
+  function function1() {
+    console.log("Function1");
+  }
+  function function2() {
+    console.log("Function2");
+  }
+  document.getElementById("btn1").onclick = function1;
+  document.getElementById("btn1").onclick = function2; // function1 will be overwritten
+</script>
+
+
+Readability and Maintainability
+Inline events can make HTML code less readable, especially when dealing with complex logic or multiple event handlers.
+They mix JavaScript code with HTML markup, which goes against the principle of separating content from behavior14.
+Scope and Closures
+Inline events require the function to be in the global scope, which can limit the use of closures and other scoping techniques1.
+Comparison with addEventListener
+Multiple Event Handlers
+Unlike inline events, addEventListener allows you to attach multiple event handlers to the same event without overwriting previous ones
+
+
+<button id="myBtn">Click Me</button>
+<script>
+  function function1() {
+    console.log("Function1");
+  }
+  function function2() {
+    console.log("Function2");
+  }
+  document.getElementById("myBtn").addEventListener("click", function1, false);
+  document.getElementById("myBtn").addEventListener("click", function2, false);
+</script>
+
+
+Removal of Event Handlers
+addEventListener also provides a method to remove event handlers using removeEventListener, which is not possible with inline events4.
+Separation of Concerns
+Using addEventListener keeps the JavaScript code separate from the HTML, improving code organization and maintainability14.
+Best Practices
+When to Use Inline Events
+Inline events can be useful for very simple, one-off event handlers where readability is not a major concern.
+They might be preferred in legacy code or specific performance-critical scenarios where the simplicity and directness are beneficial3.
+When to Use addEventListener
+For most modern web development, addEventListener is recommended due to its flexibility, ability to handle multiple event handlers, and better separation of concerns.
+Use addEventListener when you need to attach multiple functions to an event, or when you want to remove event handlers dynamically14.
+In summary, while inline events are simple and can be useful in certain contexts, addEventListener offers more flexibility, better maintainability, and is generally the preferred method for handling events in JavaScript.
+
+
