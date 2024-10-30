@@ -1,5 +1,5 @@
 Overview
-The reduce method is used to apply a function to each element in the array (from left to right) so as to reduce it to a single output value. It is often used for aggregating data.
+The reduce method is us ed to apply a function to each element in the array (from left to right) so as to reduce it to a single output value. It is often used for aggregating data.
 Syntax
 The syntax of the reduce method is as follows:
 
